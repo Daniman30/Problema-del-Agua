@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(195, 227, 255);
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 500px;
+    max-width: 1200px; /* Ajusta esto según tus necesidades */
+    margin: 0 auto; /* Centra el contenido en la página */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width: 33.33%;
+    position: relative;
+}
+.ball{
+    position: relative;
+}
+.waves{
+    position: relative;
+}
+
+@media (max-width:850px){
+    .flex-item
+    {
+        width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-item
+    {
+        width: auto;
+    }
+}
+#niños {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.cartel {
+    position: absolute;
+    width: 50%; /* Ajusta esto según tus necesidades */
+  }
+  
+  @media (max-width: 600px) {
+    .cartel {
+      width: 100%; /* Ajusta esto según tus necesidades */
+    }
+  }
+  

@@ -4,337 +4,290 @@
             "country_name": "Angola",
             "population": 35588987,
             "water_access": 23850739,
-            "ONU_inversion": 1272926,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 1.272
         },
         "ben": {
             "country_name": "Benin",
             "population": 13352864,
             "water_access": 10064459,
-            "ONU_inversion": 46074040,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 46.074
         },
         "bwa": {
             "country_name": "Botswana",
             "population": 2630296,
             "water_access": 2554615,
-            "ONU_inversion": 41970,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 0.041
         },
         "bfa": {
             "country_name": "Burkina Faso",
             "population": 22673762,
             "water_access": 17908488,
-            "ONU_inversion": 108300910,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 108.300
         },
         "bdi": {
             "country_name": "Burundi",
             "population": 12889576,
             "water_access": 10541992,
-            "ONU_inversion": 41936200,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 41.936
         },
         "cpv": {
             "country_name": "Cabo Verde",
             "population": 593149,
             "water_access": 577106,
-            "ONU_inversion": 1804764,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 1.804
         },
         "cmr": {
             "country_name": "Camerún",
             "population": 27914536,
             "water_access": 23399158,
-            "ONU_inversion": 12401076,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 12.401
         },
         "caf": {
             "country_name": "Republica Centroafricana",
             "population": 5579144,
             "water_access": 3510974,
-            "ONU_inversion": 5747850,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 5.747
         },
         "tcd": {
             "country_name": "Chad",
             "population": 17723315,
             "water_access": 11438144,
-            "ONU_inversion": 25507320,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 25.507
         },
         "com": {
             "country_name": "Comoras",
             "population": 790986,
             "water_access": 720358,
-            "ONU_inversion": 1208560,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 1.208
         },
         "cog": {
             "country_name": "Congo",
             "population": 5835806,
             "water_access": 4927308,
-            "ONU_inversion": 24199150,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 24.199
         },
         "civ": {
             "country_name": "Costa de Marfil",
             "population": 28160542,
             "water_access": 22838608,
-            "ONU_inversion": 11451520,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 11.451
         },
         "cod": {
             "country_name": "Republica Democratica del Congo",
             "population": 99010212,
             "water_access": 58491588,
-            "ONU_inversion": 119521730,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 119.521
         },
         "dji": {
             "country_name": "Djibouti",
             "population": 1120849,
             "water_access": 1019251,
-            "ONU_inversion": 15131360,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 15.131
         },
         "gnq": {
             "country_name": "Guinea Ecuatorial",
             "population": 1450694,
             "water_access": 981015,
-            "ONU_inversion": 9110,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 0.009
         },
         "eri": {
             "country_name": "Eritrea",
             "population": 3365287,
             "water_access": 2337090,
-            "ONU_inversion": 598310,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 0.598
         },
         "swz": {
             "country_name": "Eswatini",
             "population": 1201670,
             "water_access": 1001934,
-            "ONU_inversion": 25752710,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 25.752
         },
         "eth": {
             "country_name": "Etiopia",
             "population": 123379925,
             "water_access": 98102535,
-            "ONU_inversion": 187688240,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 187.688
         },
         "gab": {
             "country_name": "Gabon",
             "population": 2388992,
             "water_access": 2266985,
-            "ONU_inversion": 2038060,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 2.038
         },
         "gmb": {
             "country_name": "Gambia",
             "population": 2705992,
             "water_access": 2477489,
-            "ONU_inversion": 3179260,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 3.179
         },
         "gha": {
             "country_name": "Ghana",
             "population": 33475869,
             "water_access": 31569251,
-            "ONU_inversion": 5579625,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 5.579
         },
         "gin": {
             "country_name": "Guinea",
             "population": 13859341,
             "water_access": 11588631,
-            "ONU_inversion": 39584710,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 39.584
         },
         "gnb": {
             "country_name": "Guinea Bissau",
             "population": 2105566,
             "water_access": 1613873,
-            "ONU_inversion": 3733080,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 3.733
         },
         "ken": {
             "country_name": "Kenya",
             "population": 54027487,
             "water_access": 38640249,
-            "ONU_inversion": 247100280,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 247.100,
+            "MrBeast_inversion": 1.56
         },
         "lso": {
             "country_name": "Lesotho",
             "population": 2305825,
             "water_access": 1950858,
-            "ONU_inversion": 12547770,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 12.547
         },
         "lbr": {
             "country_name": "Liberia",
             "population": 5302681,
             "water_access": 4538420,
-            "ONU_inversion": 14867390,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 14.867
         },
         "mdg": {
             "country_name": "Madagascar",
             "population": 29611714,
             "water_access": 17169604,
-            "ONU_inversion": 28500910,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 28.500
         },
         "mwi": {
             "country_name": "Malawi",
             "population": 20405317,
             "water_access": 18921884,
-            "ONU_inversion": 80630690,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 80.630
         },
         "mli": {
             "country_name": "Mali",
             "population": 22593590,
             "water_access": 19950628,
-            "ONU_inversion": 98985720,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 98.985
         },
         "mrt": {
             "country_name": "Mauritania",
             "population": 4736139,
             "water_access": 4107500,
-            "ONU_inversion": 26967110,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 26.967
         },
         "mus": {
             "country_name": "Mauricio",
             "population": 1299469,
             "water_access": 1299469,
-            "ONU_inversion": 2651340,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 2.651
         },
         "moz": {
             "country_name": "Mozambique",
             "population": 32969518,
             "water_access": 24063280,
-            "ONU_inversion": 140770340,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 140.770
         },
         "nam": {
             "country_name": "Namibia",
             "population": 2567012,
             "water_access": 2387728,
-            "ONU_inversion": 2803060,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 2.803
         },
         "ner": {
             "country_name": "Niger",
             "population": 26207977,
             "water_access": 17960132,
-            "ONU_inversion": 153702270,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 153.702
         },
         "nga": {
             "country_name": "Nigeria",
             "population": 218541208,
             "water_access": 183446742,
-            "ONU_inversion": 110351720,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 110.351
         },
         "rwa": {
             "country_name": "Ruanda",
             "population": 13776698,
             "water_access": 11631031,
-            "ONU_inversion": 31023640,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 31.023
         },
         "stp": {
             "country_name": "Santo Tome y Principe",
             "population": 227380,
             "water_access": 222069,
-            "ONU_inversion": 3687200,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 3.687
         },
         "sen": {
             "country_name": "Senegal",
             "population": 17316449,
             "water_access": 15408303,
-            "ONU_inversion": 83235010,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 83.235
         },
         "syc": {
             "country_name": "Seychelles",
             "population": 107118,
             "water_access": 103282,
-            "ONU_inversion": 208270,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 0.208
         },
         "sle": {
             "country_name": "Sierra Leona",
             "population": 8605718,
             "water_access": 6262797,
-            "ONU_inversion": 19956140,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 19.956
         },
         "som": {
             "country_name": "Somalia",
             "population": 17597511,
             "water_access": 15248538,
-            "ONU_inversion": 31864670,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 31.864
         },
         "zaf": {
             "country_name": "Sudafrica",
             "population": 59893885,
             "water_access": 58238488,
-            "ONU_inversion": 8583970,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 8.583
         },
         "ssd": {
             "country_name": "Sudan del Sur",
             "population": 10913164,
             "water_access": 8562666,
-            "ONU_inversion": 38174260,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 38.174
         },
         "tgo": {
             "country_name": "Togo",
             "population": 8848699,
             "water_access": 6829046,
-            "ONU_inversion": 29574700,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 29.574
         },
         "uga": {
             "country_name": "Uganda",
             "population": 47249585,
             "water_access": 39763067,
-            "ONU_inversion": 145859600,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 145.859
         },
         "tza": {
             "country_name": "Republica Unida de Tanzania",
             "population": 65497749,
             "water_access": 50424113,
-            "ONU_inversion": 198640610,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 198.640
         },
         "zmb": {
             "country_name": "Zambia",
             "population": 20017675,
             "water_access": 14943255,
-            "ONU_inversion": 91205830,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 91.205
         },
         "zwe": {
             "country_name": "Zimbawe",
             "population": 16320537,
             "water_access": 12535925,
-            "ONU_inversion": 10724300,
-            "MrBeast_inversion": 0
+            "ONU_inversion": 10.724
         }
     }
 }
