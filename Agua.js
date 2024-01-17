@@ -295,136 +295,137 @@ fetch('data.json')
         return total;
     }
 myChart.update();
-// Asegúrate de que el documento HTML ha cargado completamente
-document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona el SVG
-    const miSVG = document.querySelector('object[data="/Data js/water-outline-svgrepo-com.svg"]');
-  
-    // Espera a que el SVG se haya cargado completamente
-    miSVG.addEventListener("load", function(){
-      // Accede al contenido del SVG
-      const svgDoc = miSVG.contentDocument;
-  
-      // Selecciona el elemento dentro del SVG que quieres animar
-      const gota = svgDoc.querySelector('#gota');
-  
-      // Anima tu SVG
-      TweenMax.to(gota, 1, { attr: { viewBox: "-19 -40 40 40" }, repeat: -1, repeatDelay: 2});
-    });
-  });
-
-var boy = document.getElementById('boy');
-var girl = document.getElementById('girl');
-
-// Asegúrate de que el documento HTML ha cargado completamente
-document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona el SVG
-    const miSVG = document.querySelector('object[data="/Data js/girl-child-svgrepo-com.svg"]');
-  
-    // Espera a que el SVG se haya cargado completamente
-    miSVG.addEventListener("load", function(){
-      // Accede al contenido del SVG
-      const svgDoc = miSVG.contentDocument;
-  
-      // Selecciona los elementos dentro del SVG que quieres animar
-      const boy = svgDoc.querySelector('#boy');
-      const girl = svgDoc.querySelector('#girl');
-  
-      // Inicialmente, hacemos que 'girl' sea invisible
-      boy.style.display = 'inline';
-      girl.style.display = 'none';
-  
-      // Cada 12 segundos, alternamos la visibilidad de los paths
-      setInterval(function() {
-          if (boy.style.display === 'none') {
-              boy.style.display = 'inline';
-              girl.style.display = 'none';
-          } else {
-              girl.style.display = 'inline';
-              boy.style.display = 'none';
-          }
-      }, 12000);
-    });
-  });
-  
-
-
-// Asegúrate de que el documento HTML ha cargado completamente
-document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona el SVG
-    const miSVG = document.querySelector('object[data="/Data js/Africa_cm.svg"]');
-  
-    // Espera a que el SVG se haya cargado completamente
-    miSVG.addEventListener("load", function(){
+    
+  // Asegúrate de que el documento HTML ha cargado completamente
+  document.addEventListener("DOMContentLoaded", function(){
+      // Selecciona el SVG
+      const miSVG = document.querySelector('object[data="/Data js/water-outline-svgrepo-com.svg"]');
+    
+      // Espera a que el SVG se haya cargado completamente
+      miSVG.addEventListener("load", function(){
         // Accede al contenido del SVG
         const svgDoc = miSVG.contentDocument;
-
-        // Obten el contenedor para el gráfico y los selectores
-        let container = document.getElementById('graficaMapa');
-
-        // Crea el cartel
-        const cartel = document.createElement('div');
-        cartel.style.display = 'block';
-        cartel.style.position = 'relative';
-        cartel.style.right = '-100px'; // Posiciona el cartel a la derecha
-        cartel.style.top = '0px'; // Posiciona el cartel en el centro verticalmente
-        cartel.style.marginBottom = 'auto';
-        cartel.style.fontSize = '35px';
-        container.appendChild(cartel); // Agrega el cartel al div "graficaMapa"
-
-        // Crea el bloque para el SVG
-        const bloqueSvg = document.createElement('div');
-        bloqueSvg.innerHTML = '<object id="miSvg" data="/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
-        cartel.appendChild(bloqueSvg);
-
-        // Crea el bloque para el texto
-        const bloqueTexto = document.createElement('div');
-        bloqueTexto.textContent = "TOTAL construidos 100 pozos"; // Añade el texto inicial
-        bloqueTexto.style.width = '180px';
-        cartel.appendChild(bloqueTexto);
-  
-        // Información personalizada para cada id
-        const info = {
-            'so': { texto: 'SOMALIA construidos 10 pozos', svg: 'Data js/flag-for-flag-somalia-svgrepo-com.svg' },
-            'zw': { texto: 'ZIMBABWE construidos 17 pozos', svg: 'Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
-            'ke': { texto: 'KENIA construidos 52 pozos', svg: 'Data js/flag-for-flag-kenya-svgrepo-com.svg' },
-            'ug': { texto: 'UGANDA construidos 6 pozos', svg: 'Data js/flag-for-flag-uganda-svgrepo-com.svg' },
-            'cm': { texto: 'CAMERUN construidos 15 pozos', svg: 'Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
-        };
     
-        // Para cada id en la lista
-        for (let id in info) {
-            // Selecciona el elemento dentro del SVG que quieres animar
-            const elemento = svgDoc.querySelector('#' + id);
+        // Selecciona el elemento dentro del SVG que quieres animar
+        const gota = svgDoc.querySelector('#gota');
     
-            // Cuando el ratón pasa por encima del elemento, muestra el cartel
-            elemento.addEventListener('mouseover', function(event) {
-                // Inserta el SVG en bloqueSvg
-                bloqueSvg.innerHTML = '<object id="miSvg" data="' + info[id].svg + '" type="image/svg+xml" width="200" height="200"></object>';
-                
-                // Luego añade el texto al bloqueTexto
-                bloqueTexto.textContent = info[id].texto;
-                cartel.style.display = 'block';
-                cartel.style.marginBottom = 'auto';
-                cartel.style.fontSize = '35px';
-                bloqueTexto.style.width = '180px';
-                
-            });
-            
-    
-            // Cuando el ratón sale del elemento, oculta el cartel
-            elemento.addEventListener('mouseout', function() {
-                bloqueSvg.innerHTML = '<object id="miSvg" data = "/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
-                bloqueTexto.textContent = "TOTAL: construidos 100 pozos";
-                cartel.style.display = 'block';
-                cartel.style.marginBottom = 'auto';
-                cartel.style.fontSize = '35px';
-                bloqueTexto.style.width = '200px';
-            });
-        }
-
+        // Anima tu SVG
+        TweenMax.to(gota, 1, { attr: { viewBox: "-19 -40 40 40" }, repeat: -1, repeatDelay: 2});
+      });
     });
-});
+  
+  var boy = document.getElementById('boy');
+  var girl = document.getElementById('girl');
+  
+  // Asegúrate de que el documento HTML ha cargado completamente
+  document.addEventListener("DOMContentLoaded", function(){
+      // Selecciona el SVG
+      const miSVG = document.querySelector('object[data="/Data js/girl-child-svgrepo-com.svg"]');
+    
+      // Espera a que el SVG se haya cargado completamente
+      miSVG.addEventListener("load", function(){
+        // Accede al contenido del SVG
+        const svgDoc = miSVG.contentDocument;
+    
+        // Selecciona los elementos dentro del SVG que quieres animar
+        const boy = svgDoc.querySelector('#boy');
+        const girl = svgDoc.querySelector('#girl');
+    
+        // Inicialmente, hacemos que 'girl' sea invisible
+        boy.style.display = 'inline';
+        girl.style.display = 'none';
+    
+        // Cada 12 segundos, alternamos la visibilidad de los paths
+        setInterval(function() {
+            if (boy.style.display === 'none') {
+                boy.style.display = 'inline';
+                girl.style.display = 'none';
+            } else {
+                girl.style.display = 'inline';
+                boy.style.display = 'none';
+            }
+        }, 12000);
+      });
+    });
+    
+  
+  
+  // Asegúrate de que el documento HTML ha cargado completamente
+  document.addEventListener("DOMContentLoaded", function(){
+      // Selecciona el SVG
+      const miSVG = document.querySelector('object[data="/Data js/Africa_cm.svg"]');
+    
+      // Espera a que el SVG se haya cargado completamente
+      miSVG.addEventListener("load", function(){
+          // Accede al contenido del SVG
+          const svgDoc = miSVG.contentDocument;
+  
+          // Obten el contenedor para el gráfico y los selectores
+          let container = document.getElementById('graficaMapa');
+  
+          // Crea el cartel
+          const cartel = document.createElement('div');
+          cartel.style.display = 'block';
+          cartel.style.position = 'relative';
+          cartel.style.right = '-100px'; // Posiciona el cartel a la derecha
+          cartel.style.top = '0px'; // Posiciona el cartel en el centro verticalmente
+          cartel.style.marginBottom = 'auto';
+          cartel.style.fontSize = '35px';
+          container.appendChild(cartel); // Agrega el cartel al div "graficaMapa"
+  
+          // Crea el bloque para el SVG
+          const bloqueSvg = document.createElement('div');
+          bloqueSvg.innerHTML = '<object id="miSvg" data="/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
+          cartel.appendChild(bloqueSvg);
+  
+          // Crea el bloque para el texto
+          const bloqueTexto = document.createElement('div');
+          bloqueTexto.textContent = "TOTAL construidos 100 pozos"; // Añade el texto inicial
+          bloqueTexto.style.width = '180px';
+          cartel.appendChild(bloqueTexto);
+    
+          // Información personalizada para cada id
+          const info = {
+              'so': { texto: 'SOMALIA construidos 10 pozos', svg: 'Data js/flag-for-flag-somalia-svgrepo-com.svg' },
+              'zw': { texto: 'ZIMBABWE construidos 17 pozos', svg: 'Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
+              'ke': { texto: 'KENIA construidos 52 pozos', svg: 'Data js/flag-for-flag-kenya-svgrepo-com.svg' },
+              'ug': { texto: 'UGANDA construidos 6 pozos', svg: 'Data js/flag-for-flag-uganda-svgrepo-com.svg' },
+              'cm': { texto: 'CAMERUN construidos 15 pozos', svg: 'Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
+          };
+      
+          // Para cada id en la lista
+          for (let id in info) {
+              // Selecciona el elemento dentro del SVG que quieres animar
+              const elemento = svgDoc.querySelector('#' + id);
+      
+              // Cuando el ratón pasa por encima del elemento, muestra el cartel
+              elemento.addEventListener('mouseover', function(event) {
+                  // Inserta el SVG en bloqueSvg
+                  bloqueSvg.innerHTML = '<object id="miSvg" data="' + info[id].svg + '" type="image/svg+xml" width="200" height="200"></object>';
+                  
+                  // Luego añade el texto al bloqueTexto
+                  bloqueTexto.textContent = info[id].texto;
+                  cartel.style.display = 'block';
+                  cartel.style.marginBottom = 'auto';
+                  cartel.style.fontSize = '35px';
+                  bloqueTexto.style.width = '180px';
+                  
+              });
+              
+      
+              // Cuando el ratón sale del elemento, oculta el cartel
+              elemento.addEventListener('mouseout', function() {
+                  bloqueSvg.innerHTML = '<object id="miSvg" data = "/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
+                  bloqueTexto.textContent = "TOTAL: construidos 100 pozos";
+                  cartel.style.display = 'block';
+                  cartel.style.marginBottom = 'auto';
+                  cartel.style.fontSize = '35px';
+                  bloqueTexto.style.width = '200px';
+              });
+          }
+  
+      });
+  });
 })
 
   
