@@ -295,8 +295,6 @@ fetch('data.json')
         return total;
     }
 myChart.update();
-})
-
 // Asegúrate de que el documento HTML ha cargado completamente
 document.addEventListener("DOMContentLoaded", function(){
     // Selecciona el SVG
@@ -427,6 +425,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     });
 });
+})
+
   
 
   
