@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Agua.css">
+    <title>Problema del agua</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+
+</head>
+<body>
+    
+    
+    <img src="Images/Captura de pantalla 2024-01-11 164012.png" class="center" width="900px" height="461px" alt="MrBeast(al frente) innaugurando su primer pozo de agua">
+    <h3 class="Subtitulo">Los pozos de Mr Beast en Africa</h3>
+    <p class="parrafo">
+        El reconocido YouTuber estadounidense, MrBeast, ha generado un revuelo en Internet con su último video, en el que afirma haber construido 100 pozos de agua en África. Estos nuevos pozos prometen proporcionar agua potable a medio millón de personas en Camerún, Kenia, Somalia, Uganda y Zimbabue. Además, una campaña de recaudación de fondos paralela ha logrado acumular más de 300.000 dólares para apoyar a las organizaciones locales de ayuda para el agua.
+    <p>
+    
+    
+
+    <div id="graficaMapa" style="width: 80%; display: flex; justify-content: center; margin: auto; margin-right: 190px;">
+        <object id="mapa" data="/Data js/Africa_cm.svg" type="image/svg+xml" style="width: 50%; height: 100%;"></object>  
+    </div>
+    <h3 class="Subtitulo">La crisis del agua en Africa</h3>
+    <p class="parrafo">
+        Sin embargo, la crisis del agua en África es un problema complejo y persistente. Solo uno de cada cuatro africanos tiene acceso a agua tratada, lo que resulta en la propagación de enfermedades y una alta tasa de mortalidad infantil. La concentración de recursos hídricos, su carácter multinacional, el crecimiento demográfico y la contaminación son factores que agravan la situación.        
+    </p>
+    <p class="parrafo">
+        Además solo 29 países africanos han logrado algún progreso en esta área en los últimos tres a cinco años, mientras que 25 no han logrado ningún avance.
+    </p>
+    
+    
+    <div class="center2">
+        <select class="Countries select-style" id="Countries" name="Countries">
+            <option value="" selected disabled hidden> Pais </option>
+            <option value='Todos' > Todos </option>
+        </select>
+    </div>
+    <!-- Hacer una opcion para todos -->
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div id="botellas" style="display: flex; justify-content: space-between; width: 700px; height: 520px;">
+            
+            <svg id="botella" width="250" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                <rect id="fill" x="20" y="70" rx="50" ry="30" width="200" height="420" stroke="black" stroke-width="15" fill="url(#F1g)" />
+                <rect id="fill" x="80" y="10" rx="50" ry="5" width="80" height="60" stroke="black" stroke-width="15" fill="none" />
+                <path d="M50 210 H190 M50 350 H190Z" stroke="black" stroke-width="15"></path>
+            </svg>
+            <div style="width: 200px; display: flex; flex-direction: column;">
+                
+                <p id="aguaLimpia" class="TextoAguas">
+                    El 78% de la población de toda Africa tiene acceso a agua limpia
+                </p>
+                
+                <p id="aguaSucia" class="TextoAguas">
+                    El 22% de la población de toda Africa no tiene acceso a agua limpia 
+                </p>
+            </div>
+            
+            <svg id="botella" width="250" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                <rect id="fill" x="20" y="70" rx="50" ry="30" width="200" height="420" stroke="black" stroke-width="15" fill="url(#F2g)" />
+                <rect id="fill" x="80" y="10" rx="50" ry="5" width="80" height="60" stroke="black" stroke-width="15" fill="none" />
+                <path d="M50 210 H190 M50 350 H190Z" stroke="black" stroke-width="15"></path>
+            </svg>
+                
+        </div>
+    </div>
+
+    <h3 class="Subtitulo">Casos extremos</h3>
+    <p class="parrafo">
+        En Madagascar, la situación es especialmente preocupante. Solo el 57% de la población tiene acceso a agua limpia. ¿Cómo es posible que en un mundo tan avanzado, casi la mitad de la población de un país no tenga acceso a este recurso vital? ¿Qué factores han llevado a Madagascar a esta situación crítica?
+    </p>
+    <p class="parrafo">
+        Por otro lado, en Mauricio, la situación es completamente diferente. El país ha logrado que el 100% de su población tenga acceso a agua limpia. ¿Cómo ha logrado Mauricio este hito? ¿Qué medidas ha implementado para garantizar el acceso universal al agua?
+    </p>
+    <p class="parrafo">
+        La disparidad en el acceso al agua entre Madagascar y Mauricio pone de manifiesto las desigualdades existentes en nuestro mundo. Mientras que Madagascar lucha por proporcionar agua limpia a su población, Mauricio ha logrado un acceso universal. Este contraste nos lleva a reflexionar sobre las políticas y estrategias que pueden marcar la diferencia en la gestión de los recursos hídricos. Es un llamado a la acción para aprender de los éxitos y aplicar soluciones efectivas donde más se necesitan.
+    </p>
+    <img src="Images/Niño Agua.jpg" class="center" width="900px" height="461px" alt="">
+    <h3 class="Subtitulo">La ayuda de la ONU por el agua en Africa </h3>
+    <p class="parrafo">
+        La Organización de las Naciones Unidas (ONU) está intensificando sus esfuerzos para abordar esta creciente crisis. El 35% de la ayuda para agua y saneamiento comprometida con los Objetivos de Desarrollo del Milenio se destina al continente africano, y el 27% de la asignación financiera va a África subsahariana. La ONU está comprometida con la inversión en soluciones sostenibles para el agua en África y está trabajando con gobiernos y socios para abordar esta crisis.
+    </p>
+    <p class="parrafo">
+        La colaboración global es esencial para que África pueda cumplir con el Objetivo de Desarrollo Sostenible 6, que se refiere al agua y el saneamiento. La iniciativa de MrBeast es un paso en la dirección correcta, pero se necesita mucho más para resolver esta crisis.
+
+    <p>
+       
+    </p>
+    <p>
+        
+    </p>
+    <p>
+        
+    </p>
+
+    <div id="container">
+        <div id="graficaBarras">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            
+             <canvas id="myChart"></canvas>
+        </div>
+        <div id="checkboxes" class="custom-checkbox">
+        </div>
+    </div>
+    
+    <p class="parrafo">
+        La contribución de MrBeast, aunque significativa y altamente mediática, es solo una pequeña parte de la inversión necesaria para abordar la crisis del agua en África. Con una inversión de 3 millones de dólares, su iniciativa ha logrado un impacto notable, pero no se compara con la escala de inversión que lleva a cabo la ONU.
+    </p>
+    <p class="parrafo">
+        La ONU, por otro lado, invierte cientos de millones en soluciones sostenibles para el agua en África. Estos fondos se utilizan para trabajar con gobiernos y socios en la implementación de políticas y estrategias efectivas. La magnitud de esta inversión subraya la gravedad de la crisis y la necesidad de un esfuerzo global para resolverla.
+    </p>
+    <p class="parrafo">
+        En resumen, la crisis del agua en África es un problema complejo que requiere una solución multifacética. Aunque las iniciativas individuales como la de MrBeast son valiosas y generan conciencia, la escala de la crisis requiere una inversión y un compromiso mucho mayores, como los que realiza la ONU. Solo a través de un esfuerzo global podremos garantizar un futuro sostenible para todos.
+    </p>
+    
+    <hr>
+    
+    <div id="niños">
+        
+        <div id="goteo">
+            <div>
+                <object id="pila" data="/Data js/water-tap-svgrepo-com.svg" type="image/svg+xml"></object>
+            </div>
+            
+            <div>
+                <object id="gota" data="/Data js/water-outline-svgrepo-com.svg" type="image/svg+xml"></object>
+            </div>
+            
+            <div>
+                <object id="kids" data="/Data js/girl-child-svgrepo-com.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+    </div>
+    <div class="parrafo" >
+        <p style="font-family:cursive;">
+            Mientras tú lees esta página, un niño muere por falta de agua
+        </p>
+    </div>
+    
+    <script type="module" src="Agua.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</body>
+</html>

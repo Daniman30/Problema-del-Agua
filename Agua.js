@@ -49,8 +49,6 @@ fetch('data.json')
         var stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
         stop1.setAttribute("offset", "0%");
         stop1.setAttribute("stop-color", "#c3e3ff");
-        //97572B
-        //#84b6f4
         stops.push(stop1);
         
         var stop11 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
@@ -126,7 +124,7 @@ fetch('data.json')
 
         var select = document.getElementById("Countries");
         var nombres = FillCountries();
-        var countryNames = GetCountryNames(nombres, true);
+        var countryNames = GetCountryNames(nombres, false);
         
         for (var i = 0; i < nombres.length; i++) {
             var option = document.createElement("option");
@@ -177,8 +175,17 @@ fetch('data.json')
 
         function miFuncion() {
             valorSeleccionadoGlobal = this.value;
-            let valor = value(valorSeleccionadoGlobal);
-            let pais = GetCountryName(valorSeleccionadoGlobal);
+            let valor;
+            let pais;
+            
+            if (valorSeleccionadoGlobal == 'Todos') {
+                valor = Math.floor((accesoAguaTotal(FillCountries()) * 100) / poblacionTotal(FillCountries()));
+                pais = 'toda Africa';
+            }
+            else {
+                valor = value(valorSeleccionadoGlobal);
+                pais = GetCountryName(valorSeleccionadoGlobal);
+            }
 
             actualizarGradiente('F1g', valor, '#84b6f4')
             actualizarGradiente('F2g', 100 - valor, '#97572B')
@@ -196,7 +203,7 @@ fetch('data.json')
 
 
 
-    let array = fillMoneyOnu(FillCountries()); // Este es tu array de enteros
+    let array = fillMoneyOnu(FillCountries()); // Este es el array de enteros
     array.push(3);
 
     let originalArray = [...array]; // Crea una copia del array original
@@ -205,10 +212,10 @@ fetch('data.json')
     labels.push('Inversión de MrBeast'); // Agrega el nombre de la última barra
 
     let backgroundColors = array.map(() => '#5b92e5'); // Crea un array de colores
-    backgroundColors[backgroundColors.length - 1] = '#FF0000'; // Cambia el color del último elemento
+    backgroundColors[backgroundColors.length - 1] = '#97572B'; // Cambia el color del último elemento
 
     let borderColors = array.map(() => '#5b92e5'); // Crea un array de colores para los bordes
-    borderColors[borderColors.length - 1] = '#FF0000'; // Cambia el color del último elemento
+    borderColors[borderColors.length - 1] = '#97572B'; // Cambia el color del último elemento
 
     // Crea el gráfico
     let ctx = document.getElementById('myChart').getContext('2d');
@@ -225,19 +232,26 @@ fetch('data.json')
             }]
         },
         options: {
+            indexAxis: 'y', // Cambia el eje de índice a 'y'
             scales: {
-                y: {
+                x: {
                     beginAtZero: true
                 }
-            }
+            },
+            responsive: true,
+            aspectRatio: 7/9
         }
     });
 
     // Obtiene el contenedor para el gráfico y los selectores
-    let container = document.getElementById('graficaBarras');
+    let container = document.getElementById('checkboxes');
 
     // Crea las casillas de verificación
     labels.forEach((label, index) => {
+        // Crea un nuevo div para cada par de checkbox y etiqueta
+        let checkboxDiv = document.createElement('div');
+        checkboxDiv.className = 'custom-checkbox'; // Aplica la clase de estilo al div
+
         let checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.id = `checkbox-${index}`;
@@ -249,31 +263,46 @@ fetch('data.json')
                 myChart.data.datasets[0].data[index] = null;
             }
             myChart.update();
-        });
-
-        let labelElement = document.createElement('label');
-        labelElement.htmlFor = `checkbox-${index}`;
-        labelElement.textContent = label;
-
-        container.appendChild(checkbox);
-        container.appendChild(labelElement);
     });
 
+    let labelElement = document.createElement('label');
+    labelElement.htmlFor = `checkbox-${index}`;
 
+    // Añade el checkbox y la etiqueta al div
+    checkboxDiv.appendChild(checkbox);
+    checkboxDiv.appendChild(labelElement);
 
+    // Añade el div al contenedor
+    container.appendChild(checkboxDiv);
+});
 
+    
+    
 
-// No olvides actualizar la gráfica después de modificar los datos
+    function poblacionTotal(countries){
+        var total = 0;
+        for (var i = 0; i < countries.length; i++) {
+            total += data.countries[countries[i]].population;
+        }
+        return total;
+    }
+
+    function accesoAguaTotal(countries){
+        var total = 0;
+        for (var i = 0; i < countries.length; i++) {
+            total += data.countries[countries[i]].water_access;
+        }
+        return total;
+    }
 myChart.update();
 })
 
-
-// Asegúrate de que tu documento HTML ha cargado completamente
+// Asegúrate de que el documento HTML ha cargado completamente
 document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona tu SVG
+    // Selecciona el SVG
     const miSVG = document.querySelector('object[data="/Data js/water-outline-svgrepo-com.svg"]');
   
-    // Espera a que tu SVG se haya cargado completamente
+    // Espera a que el SVG se haya cargado completamente
     miSVG.addEventListener("load", function(){
       // Accede al contenido del SVG
       const svgDoc = miSVG.contentDocument;
@@ -289,12 +318,12 @@ document.addEventListener("DOMContentLoaded", function(){
 var boy = document.getElementById('boy');
 var girl = document.getElementById('girl');
 
-// Asegúrate de que tu documento HTML ha cargado completamente
+// Asegúrate de que el documento HTML ha cargado completamente
 document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona tu SVG
+    // Selecciona el SVG
     const miSVG = document.querySelector('object[data="/Data js/girl-child-svgrepo-com.svg"]');
   
-    // Espera a que tu SVG se haya cargado completamente
+    // Espera a que el SVG se haya cargado completamente
     miSVG.addEventListener("load", function(){
       // Accede al contenido del SVG
       const svgDoc = miSVG.contentDocument;
@@ -307,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function(){
       boy.style.display = 'inline';
       girl.style.display = 'none';
   
-      // Cada 105 segundos, alternamos la visibilidad de los paths
+      // Cada 12 segundos, alternamos la visibilidad de los paths
       setInterval(function() {
           if (boy.style.display === 'none') {
               boy.style.display = 'inline';
@@ -316,48 +345,53 @@ document.addEventListener("DOMContentLoaded", function(){
               girl.style.display = 'inline';
               boy.style.display = 'none';
           }
-      }, 20000);
+      }, 12000);
     });
   });
   
 
 
-// Asegúrate de que tu documento HTML ha cargado completamente
+// Asegúrate de que el documento HTML ha cargado completamente
 document.addEventListener("DOMContentLoaded", function(){
-    // Selecciona tu SVG
+    // Selecciona el SVG
     const miSVG = document.querySelector('object[data="/Data js/Africa_cm.svg"]');
   
-    // Espera a que tu SVG se haya cargado completamente
+    // Espera a que el SVG se haya cargado completamente
     miSVG.addEventListener("load", function(){
         // Accede al contenido del SVG
         const svgDoc = miSVG.contentDocument;
 
-        // Obtiene el contenedor para el gráfico y los selectores
+        // Obten el contenedor para el gráfico y los selectores
         let container = document.getElementById('graficaMapa');
 
         // Crea el cartel
         const cartel = document.createElement('div');
-        cartel.style.display = 'none';
-        cartel.style.position = 'relative'; // Cambia esto
+        cartel.style.display = 'block';
+        cartel.style.position = 'relative';
         cartel.style.right = '-100px'; // Posiciona el cartel a la derecha
         cartel.style.top = '0px'; // Posiciona el cartel en el centro verticalmente
+        cartel.style.marginBottom = 'auto';
+        cartel.style.fontSize = '35px';
         container.appendChild(cartel); // Agrega el cartel al div "graficaMapa"
 
         // Crea el bloque para el SVG
         const bloqueSvg = document.createElement('div');
+        bloqueSvg.innerHTML = '<object id="miSvg" data="/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
         cartel.appendChild(bloqueSvg);
 
         // Crea el bloque para el texto
         const bloqueTexto = document.createElement('div');
+        bloqueTexto.textContent = "TOTAL construidos 100 pozos"; // Añade el texto inicial
+        bloqueTexto.style.width = '180px';
         cartel.appendChild(bloqueTexto);
   
         // Información personalizada para cada id
         const info = {
-            'so': { texto: 'SOMALIA: El video, que ya cuenta con más de 100 millones de reproducciones, ha generado reacciones encontradas en las redes sociales, tanto de elogio como de crítica. Algunos activistas y periodistas keniatas han comparado las acciones del youtuber con las del gobierno de Kenia. ', svg: '/Data js/flag-for-flag-somalia-svgrepo-com.svg' },
-            'zw': { texto: 'ZIMBABWE: El video, que ya cuenta con más de 100 millones de reproducciones, ha generado reacciones encontradas en las redes sociales, tanto de elogio como de crítica. Algunos activistas y periodistas keniatas han comparado las acciones del youtuber con las del gobierno de Kenia.', svg: '/Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
-            'ke': { texto: 'KENIA: El video, que ya cuenta con más de 100 millones de reproducciones, ha generado reacciones encontradas en las redes sociales, tanto de elogio como de crítica. Algunos activistas y periodistas keniatas han comparado las acciones del youtuber con las del gobierno de Kenia.', svg: '/Data js/flag-for-flag-kenya-svgrepo-com.svg' },
-            'ug': { texto: 'UGANDA: El video, que ya cuenta con más de 100 millones de reproducciones, ha generado reacciones encontradas en las redes sociales, tanto de elogio como de crítica. Algunos activistas y periodistas keniatas han comparado las acciones del youtuber con las del gobierno de Kenia.', svg: '/Data js/flag-for-flag-uganda-svgrepo-com.svg' },
-            'cm': { texto: 'CAMERUN: El video, que ya cuenta con más de 100 millones de reproducciones, ha generado reacciones encontradas en las redes sociales, tanto de elogio como de crítica. Algunos activistas y periodistas keniatas han comparado las acciones del youtuber con las del gobierno de Kenia.', svg: '/Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
+            'so': { texto: 'SOMALIA construidos 10 pozos', svg: '/Data js/flag-for-flag-somalia-svgrepo-com.svg' },
+            'zw': { texto: 'ZIMBABWE construidos 17 pozos', svg: '/Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
+            'ke': { texto: 'KENIA construidos 52 pozos', svg: '/Data js/flag-for-flag-kenya-svgrepo-com.svg' },
+            'ug': { texto: 'UGANDA construidos 6 pozos', svg: '/Data js/flag-for-flag-uganda-svgrepo-com.svg' },
+            'cm': { texto: 'CAMERUN construidos 15 pozos', svg: '/Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
         };
     
         // Para cada id en la lista
@@ -373,23 +407,26 @@ document.addEventListener("DOMContentLoaded", function(){
                 // Luego añade el texto al bloqueTexto
                 bloqueTexto.textContent = info[id].texto;
                 cartel.style.display = 'block';
-                bloqueTexto.style.width = '200px';
-                // Define la media query
+                cartel.style.marginBottom = 'auto';
+                cartel.style.fontSize = '35px';
+                bloqueTexto.style.width = '180px';
                 
             });
             
     
             // Cuando el ratón sale del elemento, oculta el cartel
             elemento.addEventListener('mouseout', function() {
-                cartel.style.display = 'none';
+                bloqueSvg.innerHTML = '<object id="miSvg" data = "/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
+                bloqueTexto.textContent = "TOTAL: construidos 100 pozos";
+                cartel.style.display = 'block';
+                cartel.style.marginBottom = 'auto';
+                cartel.style.fontSize = '35px';
+                bloqueTexto.style.width = '200px';
             });
         }
 
     });
 });
-
-    // const contenedorSVG = document.querySelector('#contenedorSVG');
-    // contenedorSVG.style.position = 'relative';
   
 
   
