@@ -299,7 +299,7 @@ myChart.update();
   // Asegúrate de que el documento HTML ha cargado completamente
   document.addEventListener("DOMContentLoaded", function(){
       // Selecciona el SVG
-      const miSVG = document.querySelector('object[data="/Data js/water-outline-svgrepo-com.svg"]');
+      const miSVG = document.querySelector('object[data="Data js/water-outline-svgrepo-com.svg"]');
     
       // Espera a que el SVG se haya cargado completamente
       miSVG.addEventListener("load", function(){
@@ -320,7 +320,7 @@ myChart.update();
   // Asegúrate de que el documento HTML ha cargado completamente
   document.addEventListener("DOMContentLoaded", function(){
       // Selecciona el SVG
-      const miSVG = document.querySelector('object[data="/Data js/girl-child-svgrepo-com.svg"]');
+      const miSVG = document.querySelector('object[data="Data js/girl-child-svgrepo-com.svg"]');
     
       // Espera a que el SVG se haya cargado completamente
       miSVG.addEventListener("load", function(){
@@ -353,7 +353,7 @@ myChart.update();
   // Asegúrate de que el documento HTML ha cargado completamente
   document.addEventListener("DOMContentLoaded", function(){
       // Selecciona el SVG
-      const miSVG = document.querySelector('object[data="/Data js/Africa_cm.svg"]');
+      const miSVG = document.querySelector('object[data="Data js/Africa_cm.svg"]');
     
       // Espera a que el SVG se haya cargado completamente
       miSVG.addEventListener("load", function(){
@@ -375,7 +375,7 @@ myChart.update();
   
           // Crea el bloque para el SVG
           const bloqueSvg = document.createElement('div');
-          bloqueSvg.innerHTML = '<object id="miSvg" data="/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
+          bloqueSvg.innerHTML = '<object id="miSvg" data="Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
           cartel.appendChild(bloqueSvg);
   
           // Crea el bloque para el texto
@@ -415,7 +415,7 @@ myChart.update();
       
               // Cuando el ratón sale del elemento, oculta el cartel
               elemento.addEventListener('mouseout', function() {
-                  bloqueSvg.innerHTML = '<object id="miSvg" data = "/Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
+                  bloqueSvg.innerHTML = '<object id="miSvg" data = "Data js/youtube-color-svgrepo-com.svg" type="image/svg+xml" width="200" height="200"></object>';
                   bloqueTexto.textContent = "TOTAL: construidos 100 pozos";
                   cartel.style.display = 'block';
                   cartel.style.marginBottom = 'auto';
