@@ -6,7 +6,36 @@ body{
     max-width: 1200px;
     margin: 0 auto; /* Centra el contenido en la página */
 }
-
+#fraseFinal{
+    font-family:cursive;
+}
+#aguaTextos{
+    width: 200px; 
+    display: flex; 
+    flex-direction: column;
+}
+#botellaYtexto{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+#botellas{
+    display: flex; 
+    justify-content: space-between; 
+    width: 700px; 
+    height: 520px;
+}
+#graficaMapa{
+    width: 80%; 
+    display: flex; 
+    justify-content: center; 
+    margin: auto; 
+    margin-right: 190px;
+}
+#mapa{
+    width: 50%; 
+    height: 100%;
+}
 .center {
     display: block;
     margin-left: auto;
