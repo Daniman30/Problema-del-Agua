@@ -387,11 +387,11 @@ fetch('data.json')
       
             // Información personalizada para cada id
             const info = {
-                'so': { texto: 'SOMALIA construidos 10 pozos', svg: '/Data js/flag-for-flag-somalia-svgrepo-com.svg' },
-                'zw': { texto: 'ZIMBABWE construidos 17 pozos', svg: '/Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
-                'ke': { texto: 'KENIA construidos 52 pozos', svg: '/Data js/flag-for-flag-kenya-svgrepo-com.svg' },
-                'ug': { texto: 'UGANDA construidos 6 pozos', svg: '/Data js/flag-for-flag-uganda-svgrepo-com.svg' },
-                'cm': { texto: 'CAMERUN construidos 15 pozos', svg: '/Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
+                'so': { texto: 'SOMALIA construidos 10 pozos', svg: 'Data js/flag-for-flag-somalia-svgrepo-com.svg' },
+                'zw': { texto: 'ZIMBABWE construidos 17 pozos', svg: 'Data js/flag-for-flag-zimbabwe-svgrepo-com.svg' },
+                'ke': { texto: 'KENIA construidos 52 pozos', svg: 'Data js/flag-for-flag-kenya-svgrepo-com.svg' },
+                'ug': { texto: 'UGANDA construidos 6 pozos', svg: 'Data js/flag-for-flag-uganda-svgrepo-com.svg' },
+                'cm': { texto: 'CAMERUN construidos 15 pozos', svg: 'Data js/flag-for-flag-cameroon-svgrepo-com.svg' }
             };
         
             // Para cada id en la lista
