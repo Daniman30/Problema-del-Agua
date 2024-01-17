@@ -20,8 +20,8 @@
     
     
 
-    <div id="graficaMapa" style="width: 80%; display: flex; justify-content: center; margin: auto; margin-right: 190px;">
-        <object id="mapa" data="Data js/Africa_cm.svg" type="image/svg+xml" style="width: 50%; height: 100%;"></object>  
+    <div id="graficaMapa">
+        <object title="mapa" id="mapa" data="Data js/Africa_cm.svg" type="image/svg+xml"></object>  
     </div>
     <h3 class="Subtitulo">La crisis del agua en Africa</h3>
     <p class="parrafo">
@@ -33,21 +33,21 @@
     
     
     <div class="center2">
-        <select class="Countries select-style" id="Countries" name="Countries">
+        <select class="Countries select-style" id="Countries" name="Countries" title="Países">
             <option value="" selected disabled hidden> Pais </option>
             <option value='Todos' > Todos </option>
         </select>
     </div>
     <!-- Hacer una opcion para todos -->
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <div id="botellas" style="display: flex; justify-content: space-between; width: 700px; height: 520px;">
+    <div id="botellaYtexto">
+        <div id="botellas">
             
             <svg id="botella" width="250" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
                 <rect id="fill" x="20" y="70" rx="50" ry="30" width="200" height="420" stroke="black" stroke-width="15" fill="url(#F1g)" />
                 <rect id="fill" x="80" y="10" rx="50" ry="5" width="80" height="60" stroke="black" stroke-width="15" fill="none" />
                 <path d="M50 210 H190 M50 350 H190Z" stroke="black" stroke-width="15"></path>
             </svg>
-            <div style="width: 200px; display: flex; flex-direction: column;">
+            <div id="aguaTextos">
                 
                 <p id="aguaLimpia" class="TextoAguas">
                     El 78% de la población de toda Africa tiene acceso a agua limpia
@@ -121,20 +121,20 @@
         
         <div id="goteo">
             <div>
-                <object id="pila" data="Data js/water-tap-svgrepo-com.svg" type="image/svg+xml"></object>
+                <object title="pila" id="pila" data="Data js/water-tap-svgrepo-com.svg" type="image/svg+xml"></object>
             </div>
             
             <div>
-                <object id="gota" data="Data js/water-outline-svgrepo-com.svg" type="image/svg+xml"></object>
+                <object title="gota" id="gota" data="Data js/water-outline-svgrepo-com.svg" type="image/svg+xml"></object>
             </div>
             
             <div>
-                <object id="kids" data="Data js/girl-child-svgrepo-com.svg" type="image/svg+xml"></object>
+                <object title="niños" id="kids" data="Data js/girl-child-svgrepo-com.svg" type="image/svg+xml"></object>
             </div>
         </div>
     </div>
     <div class="parrafo" >
-        <p style="font-family:cursive;">
+        <p id="fraseFinal">
             Mientras tú lees esta página, un niño muere por falta de agua
         </p>
     </div>
